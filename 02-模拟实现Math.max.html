@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/* 模拟实现Math.max() 方法 */
+function max(){
+  var maxNum = arguments[0];
+  for(var i = 1; i < arguments.length; i++){
+    if(maxNum < arguments[i]){
+      maxNum = arguments[i];
+    }
+  }
+  return maxNum;
+}
+console.log(max(1,9,3,6,8,12));
+
+
+/* 自己实现Math.min() */
+</script>
+</html>

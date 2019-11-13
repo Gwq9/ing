@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/* 编写一个方法去掉一个数组的重复元素 */
+
+function removeRepeat() {
+  var o = {};
+  // 先统计出第个元素出现的次数
+  for (var i = 0; i < array.length; i++) {
+    var item = array[i];
+    if (o[item]) {
+      o[item]++;
+    }else{
+      o[item] = 1;
+    }
+  }
+  // 根据统计的次数，把元素放进一个新数组
+  var tmpArray = [];
+  for(var key in o) {
+    if (o[key] == 1) {
+      tmpArray.push(key);
+    }else{
+      if(tmpArray.indexOf(key) == -1){
+        tmpArray.push(key);
+      }
+    }
+  }
+  return tmpArray;
+}
+
+var array =  ['c', 'a', 'z', 'a', 'x', 'a'];
+console.log(removeRepeat(array));
+</script>
+</html>
